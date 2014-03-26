@@ -1,0 +1,35 @@
+
+<div id="newload">
+
+<script src="http://cdn.eyahuska.com/paper.js"></script>
+<script src="js/vid.js"></script>
+<script type="text/paperscript" src="js/paper_splat.js" canvas="mycanvas"></script>
+<canvas resize="true" id="mycanvas"></canvas>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        //$('#newload').html('<canvas resize="true" id="mycanvas"></canvas>');
+        //$.getScript('js/paper.js', function () {
+            //paper.PaperScript.load();
+        //});
+        //$.getScript('js/paper_splat.js', function () {});
+        //$.getScript('js/vid.js', function () {});
+
+
+        $("#close_overlay").on("click", function () {
+            var canvas = document.getElementById('mycanvas');
+            var imageUrl = canvas.toDataURL("image/jpeg");
+            $('#main_overlay').css('opacity', '0');
+            $('#main_overlay').css('display', 'none');
+            $('#main_overlay').css('visibility', 'hidden');
+            $('html').css('background-image', 'url(' + imageUrl + ')');
+            console.log(imageUrl);
+            $('#newload').remove();
+            canvas.width = canvas.width;
+        });
+    });
+
+</script>
+
+</div>
