@@ -1,4 +1,4 @@
-/* ==========================================================================
+csws/* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
  html, button, input, select, textarea {
@@ -161,27 +161,30 @@ body > div.palettejs-panel {
     left:0;
     right:0;
     bottom:0;
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color:rgba(255, 255, 255, 1.0);
     z-index:100;
 }
 #status {
     position: fixed;
-    top: 0;
+    top: 22.5%;
     left: 0;
-    bottom: 0;
     right: 0;
     margin: auto;
-    width: 300px;
-    height: 152px;
+    
+    /*updated width & height*/
+    width: 50%;
+
     background: rgba(255, 255, 255, 0.90);
-    padding: 22px 32px;
-    -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
-    -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
-    -o-box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
-    -ms-box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    
+    padding: 0px;
+    -moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+    
     font-family:"Lucida Console", Monaco, monospace;
-    font-size: 12px;
+    font-size: 10px;
 }
 #fps{
     color:black;
@@ -398,11 +401,11 @@ body > div.palettejs-panel {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  
+
 /* position: absolute; */
-  
+
 /* top: 0; */
-  
+
 /* left: 0; */
 }
 
@@ -434,6 +437,24 @@ body > div.palettejs-panel {
     margin-bottom: 13px;
     text-indent: 11px;
 }
+#bar{
+    width:0%;
+    z-index: 9999;
+    height:20px;
+    display:block;
+    background-color:#000;
+    /*
+    -webkit-transition: all 0.01s ease;
+    -moz-transition: all 0.01s ease;
+    -o-transition: all 0.01s ease;
+    transition: all 0.01s ease;
+    */
+}
+#percentage{
+    z-index: 9999;
+    display:block;
+    float:right;
+}
 /* ==========================================================================
    NAV
    ========================================================================== */
@@ -450,6 +471,7 @@ body > div.palettejs-panel {
    Media Queries
    ========================================================================== */
  @media only screen and (min-width: 480px) {
+
     /* ====================
     INTERMEDIATE: Menu
    ==================== */
@@ -477,6 +499,30 @@ body > div.palettejs-panel {
     }
 }
 @media only screen and (min-width: 768px) {
+
+  /* ====================
+    CUSTOM RULES
+   ==================== */
+    #status {
+        position: fixed;
+        top: 35%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        
+        /*updated width & height*/
+        width: 29%;
+
+        background: rgba(255, 255, 255, 0.90);
+        padding: 22px 32px;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        font-family:"Lucida Console", Monaco, monospace;
+        font-size: 12px;
+    }
     /* ====================
     WIDE: CSS3 Effects
    ==================== */

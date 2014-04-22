@@ -69,8 +69,8 @@ function handleData(result) {
                 imageamount: valueajax++
             });
             var rimgur = image.link;
-            var newimage = base64(rimgur);
-            $("#percentage").html('<b>0%</b>');
+            var newimage = preload(rimgur);
+            //$("#percentage").html('<b style="font-size:9px;">Ready?</b>');
 
         }
     })
@@ -152,17 +152,13 @@ function preload(dataURL) {
     var ac = Number(ajaxlength.length);
     if (percent >= 0 && percent <= 100) {
         $("#bar").css("width", percent + "%");
-        $("#percentage").html('<b>'+percent + "%</b>");
-    }
-    if (percent >= 100) {
-        $("#percentage").html('<b>Finishing Up...</b>');
     }
     if (ic == ac) setTimeout(function () {
         $("#preloader").fadeOut(250);
         $("#bar").fadeOut(250);
         $("#bar").css("width", 0);
         percent = 0;
-    }, 1E3);
+    }, 5E3);
     var img = new Image;
     img.onload = function () {
         cache.push({
@@ -239,8 +235,8 @@ function getMoreImages() {
                     imageamount: valueajax++
                 });
                 var rimgur = image.link;
-                var newimage = base64(rimgur);
-                $("#percentage").html('<b>0%</b>');
+                var newimage = preload(rimgur);
+                //$("#percentage").html('<b style="font-size:10px;">Ready?</b>');
             }
         })
     }
