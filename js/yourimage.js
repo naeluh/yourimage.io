@@ -40,7 +40,7 @@ function extractToken(hash) {
 }
 var num = Math.floor(Math.random() * 50);
 var token = extractToken(document.location.hash);
-var clientId = "b144351ffb05838";
+var clientId = "clientId";
 var auth;
 if (token) authorization = "Bearer " + token;
 else authorization = "Client-ID " + clientId;
